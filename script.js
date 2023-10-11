@@ -12,7 +12,7 @@ function fetchCharacters(ids) {
             const characters = Array.isArray(data) ? data : [data];
             displayCharacters(characters);
            // console.log(characters)
-        });
+        }).catch(console.log("falle"));
         
 }
 
