@@ -11,7 +11,7 @@ function fetchCharacters(ids) {
             // cómo no se si es un id o varios, creo o la variable y el array            
             const characters = Array.isArray(data) ? data : [data];
             displayCharacters(characters);
-            console.log(characters)
+           // console.log(characters)
         });
         
 }
@@ -19,17 +19,17 @@ function fetchCharacters(ids) {
 function displayCharacters(characters) {
     const gridContainer = document.getElementById("characterGrid");
     
-    characters.forEach(character => {
+    characters.forEach(personaje => {
         const characterCard = document.createElement("section");
         characterCard.classList.add("character-card");
 
         const characterImage = document.createElement("img");
         characterImage.classList.add("character-image");
-        characterImage.src = character.image;
+        characterImage.src = personaje.image;
 
         const characterName = document.createElement("section");
         characterName.classList.add("character-name");
-        characterName.textContent = character.name;
+        characterName.textContent = personaje.name;
 
         characterCard.appendChild(characterImage);
         characterCard.appendChild(characterName);
